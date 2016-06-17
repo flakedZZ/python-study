@@ -23,7 +23,23 @@ def demo_controlflow():
     for i in range(0,20,1):
         print i
 
+def demo_list():
+    lista=[1,2,3,45,5]
+    listb=['a','b','c',4]
+    print lista
+    print listb
+    for i in listb:
+        print i
+
+
+def demo_dirt():
+    dirta={1:1,2:4,3:9}
+    print dirta.items()
+    print dirta
+
 if __name__ == '__main__':
     # print 'hello world'
-    demo_controlflow()
+    #demo_controlflow()
     # demo_string()
+    #demo_list()
+    demo_dirt()
