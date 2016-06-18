@@ -1,3 +1,5 @@
+import random
+
 def demo_string():
     stra = "hello neko"
     print 1, stra.upper()
@@ -37,9 +39,17 @@ def demo_dirt():
     print dirta.items()
     print dirta
 
+def demo_set():
+    setA=set([1,2,3,4,5])
+    print setA
+
+def demo_random():
+    print random.random()
 if __name__ == '__main__':
     # print 'hello world'
     #demo_controlflow()
     # demo_string()
     #demo_list()
-    demo_dirt()
+    #emo_dirt()
+    #demo_set()
+    demo_random()
