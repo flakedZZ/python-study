@@ -1,5 +1,7 @@
 import random
-
+import requests
+import re
+from bs4 import BeautifulSoup
 def demo_string():
     stra = "hello neko"
     print 1, stra.upper()
@@ -45,6 +47,16 @@ def demo_set():
 
 def demo_random():
     print random.random()
+
+
+def demo_requests():
+    s=requests.session()
+    content=s.get("http://www.qiushibaike.com/")
+    str=content.content
+    soup=BeautifulSoup(str,'html.parser')
+    for div in soup.find_all('div',{'class':'content'}):
+        print div.text
+
 if __name__ == '__main__':
     # print 'hello world'
     #demo_controlflow()
@@ -52,4 +64,5 @@ if __name__ == '__main__':
     #demo_list()
     #emo_dirt()
     #demo_set()
-    demo_random()
+    #demo_random()
+    demo_requests()
